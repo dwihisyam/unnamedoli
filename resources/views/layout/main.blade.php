@@ -37,7 +37,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{url('/home')}}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{url('/mempelai')}}">Mempelai </a></li>
                             <li class="nav-item"><a class="nav-link" href="{{url('/acara')}}">Acara</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{url('/galeri')}}">Galeri</a></li>
@@ -58,7 +58,7 @@
         <div class="footer_inner p_50">
             <img src="{{asset('/honey/img/footer-logo.png')}}" alt="">
             <ul class="list f_menu">
-                <li><a href="{{url('/')}}">Home</a></li>
+                <li><a href="{{url('/home')}}">Home</a></li>
                 <li><a href="{{url('/mempelai')}}">Mempelai</a></li>
                 <li><a href="{{url('/ucapan')}}">Acara</a></li>
                 <li><a href="{{url('/galeri')}}">Galeri</a></li>
