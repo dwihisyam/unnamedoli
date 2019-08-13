@@ -19,7 +19,3 @@ Route::get('/galeri', 'PagesController@galeri');
 Route::get('/lokasi', 'PagesController@lokasi');
 Route::get('/ucapan', 'PagesController@ucapan');
 Route::post('/ucapan', 'PagesController@create');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

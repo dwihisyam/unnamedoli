@@ -28,7 +28,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container box_1620">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="{{asset('/honey/img/logo.png')}}" alt=""></a>
+                    <a class="navbar-brand logo_h" href="{{url('/')}}"><img src="{{asset('/honey/img/logo.png')}}" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -60,7 +60,7 @@
             <ul class="list f_menu">
                 <li><a href="{{url('/')}}">Home</a></li>
                 <li><a href="{{url('/mempelai')}}">Mempelai</a></li>
-                <li><a href="{{url('/ucapan')}}">Acara</a></li>
+                <li><a href="{{url('/acara')}}">Acara</a></li>
                 <li><a href="{{url('/galeri')}}">Galeri</a></li>
                 <li><a href="{{url('/lokasi')}}">Lokasi</a></li>
                 <li><a href="{{url('/ucapan')}}">Ucapan</a></li>
