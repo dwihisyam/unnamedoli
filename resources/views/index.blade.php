@@ -21,13 +21,12 @@
 </head>
 
 <body>
-
     <!--================Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container box_1620">
-                    <audio src="{{asset('/musik.mp3')}}" autoplay="autoplay"></audio>
+                    <audio id="musik" src="{{asset('/musik.mp3')}}" loop autoplay muted></audio>
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="{{url('/')}}"><img src="{{asset('/honey/img/logo.png')}}" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +37,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a><i id="btn-musik" class="fas fa-music fa-5x"></i></a></li>
                             <li class="nav-item"><a id="home" class="nav-link">Home</a></li>
                             <li class="nav-item"><a id="mempelai" class="nav-link">Mempelai </a></li>
                             <li class="nav-item"><a id="acara" class="nav-link">Acara</a></li>
@@ -51,7 +51,8 @@
     </header>
     <!--================Header Menu Area =================-->
 
-    <div class="badan"></div>
+    <div class="badan">
+    </div>
 
     <!--================Footer Area =================-->
     <footer class="footer_area">
@@ -78,6 +79,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/a4ed702092.js"></script>
     <script src="{{asset('/honey/js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('/honey/js/popper.js')}}"></script>
     <script src="{{asset('/honey/js/bootstrap.min.js')}}"></script>
@@ -132,16 +134,14 @@
                 }
             }, 1000);
 
-            function initialize() {
-                var propertiPeta = {
-                    center: new google.maps.LatLng(-8.5830695, 116.3202515),
-                    zoom: 15,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-
-                var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
+            $('#btn-musik').click(function() {
+                var mus = document.getElementById("musik");
+                if (mus.muted == true) {
+                    mus.muted = false;
+                } else {
+                    mus.muted = true;
+                }
+            });
         }())
     </script>
 </body>
