@@ -58,14 +58,6 @@
     <footer class="footer_area">
         <div class="footer_inner p_50">
             <img src="{{asset('/honey/img/footer-logo.png')}}" alt="">
-            <ul class="list f_menu">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li><a href="{{url('/mempelai')}}">Mempelai</a></li>
-                <li><a href="{{url('/acara')}}">Acara</a></li>
-                <li><a href="{{url('/galeri')}}">Galeri</a></li>
-                <li><a href="{{url('/lokasi')}}">Lokasi</a></li>
-                <li><a href="{{url('/ucapan')}}">Ucapan</a></li>
-            </ul>
             <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
