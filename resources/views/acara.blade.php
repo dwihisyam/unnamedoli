@@ -1,13 +1,6 @@
-@extends('layout/main')
-
-
-@section('title', 'Acara')
-
-
-@section('container')
 <section class="timer_area">
-    <div class="container box_1620">
-        <div class="timer_inner p_120">
+    <div class="container box_1620 p_50">
+        <div class="timer_inner p_50">
             <h5>Until we getting married</h5>
             <div id="timer" class="timer">
                 <div class="timer__section days">
@@ -74,30 +67,3 @@
         </div>
     </div>
 </section>
-@endsection
-@section('scripts')
-<script>
-    (function() {
-        var countDownDate = new Date("Dec 11, 2019 00:00:00").getTime();
-        var x = setInterval(function() {
-            var now = new Date().getTime();
-            var distance = countDownDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("hari").innerHTML = days;
-            document.getElementById("jam").innerHTML = hours;
-            document.getElementById("menit").innerHTML = minutes;
-            document.getElementById("detik").innerHTML = seconds;
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("hari").innerHTML = "00";
-                document.getElementById("jam").innerHTML = "00";
-                document.getElementById("menit").innerHTML = "00";
-                document.getElementById("detik").innerHTML = "00";
-            }
-        }, 1000);
-    }())
-</script>
-@endsection

@@ -8,9 +8,14 @@ use Illuminate\Support\Carbon;
 
 class PagesController extends Controller
 {
-    public function home()
+    public function index()
     {
         return view('index');
+    }
+
+    public function home()
+    {
+        return view('home');
     }
 
     public function mempelai()

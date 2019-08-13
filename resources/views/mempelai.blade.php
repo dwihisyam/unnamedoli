@@ -1,11 +1,4 @@
-@extends('layout/main')
-
-
-@section('title', 'Mempelai')
-
-
-@section('container')
-<section class="story_area p_120">
+<section class="story_area p_50">
     <div class="container">
         <div class="row story_inner">
             <div class="col-lg-4">
@@ -24,4 +17,3 @@
         </div>
     </div>
 </section>
-@endsection

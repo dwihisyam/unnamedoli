@@ -37,12 +37,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('/mempelai')}}">Mempelai </a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('/acara')}}">Acara</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('/galeri')}}">Galeri</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('/lokasi')}}">Lokasi</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{url('/ucapan')}}">Ucapan</a></li>
+                            <li class="nav-item klik" id="home"><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                            <li class="nav-item klik" id="mempelai"><a class="nav-link" href="{{url('/mempelai')}}">Mempelai </a></li>
+                            <li class="nav-item klik" id="acara"><a class="nav-link" href="{{url('/acara')}}">Acara</a></li>
+                            <li class="nav-item klik" id="galeri"><a class="nav-link" href="{{url('/galeri')}}">Galeri</a></li>
+                            <li class="nav-item klik" id="lokasi"><a class="nav-link" href="{{url('/lokasi')}}">Lokasi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -92,6 +91,26 @@
     <script src="{{asset('/honey/js/mail-script.js')}}"></script>
     <script src="{{asset('/honey/js/theme.js')}}"></script>
     @yield('scripts')
+    <script>
+        (function() {
+            $('.klik').click(function() {
+                var menu = $(this).attr('id');
+                if (menu == 'home') {
+                    $('.badan').load('index.blade.php');
+                } else if (menu == 'mempelai') {
+                    $('.badan').load('mempelai.blade.php');
+                } else if (menu == 'acara') {
+                    $('.badan').load('acara.blade.php');
+                } else if (menu == 'galeri') {
+                    $('.badan').load('galeri.blade.php');
+                } else if (menu == 'lokasi') {
+                    $('.badan').load('lokasi.blade.php');
+                }
+            });
+
+            $('.badan').load('index.blade.php');
+        }())
+    </script>
 </body>
 
 </html>
